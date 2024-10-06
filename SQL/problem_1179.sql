@@ -39,8 +39,7 @@ Output:
     | 2    | 9000        | null        | null        | ... | null        |
     | 3    | null        | 10000       | null        | ... | null        |
     +------+-------------+-------------+-------------+-----+-------------+
-Explanation:
-    The revenue from Apr to Dec is null.
+Explanation: The revenue from Apr to Dec is null.
 
 Note that the result table has 13 columns (1 for the department id + 12 for the months).
 */
