@@ -33,7 +33,6 @@ Return the resulting table in any order.
 The result format is in the following example.
 
 Example 1:
-
 Input: 
 Sales table:
     +---------+------------+------+----------+-------+
@@ -67,6 +66,13 @@ Explanation:
 
 -- Solution
 
-SELECT product_name, year, price
-FROM Sales
-JOIN Product ON Sales.product_id = Product.product_id;
+SELECT
+    product_name,
+    year,
+    price
+FROM
+    Sales
+JOIN
+    Product
+ON
+    Sales.product_id = Product.product_id
