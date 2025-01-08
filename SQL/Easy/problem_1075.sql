@@ -22,10 +22,12 @@ Table: Employee
     | name             | varchar |
     | experience_years | int     |
     +------------------+---------+
-employee_id is the primary key of this table. It's guaranteed that experience_years is not NULL.
+employee_id is the primary key of this table.
+It's guaranteed that experience_years is not NULL.
 Each row of this table contains information about one employee.
  
-Write an SQL query that reports the average experience years of all the employees for each project,
+Write an SQL query that reports the average experience years of
+all the employees for each project,
 rounded to 2 digits.
 Return the result table in any order.
 The query result format is in the following example.
@@ -66,7 +68,14 @@ Explanation:
 
 -- Solution
 
-SELECT project_id, ROUND(AVG(experience_years), 2) AS average_years
-FROM Project
-JOIN Employee ON Project.employee_id = Employee.employee_id
-GROUP BY project_id;
+SELECT
+    project_id,
+    ROUND(AVG(experience_years), 2) AS average_years
+FROM
+    Project
+JOIN
+    Employee
+ON
+    Project.employee_id = Employee.employee_id
+GROUP BY
+    project_id
