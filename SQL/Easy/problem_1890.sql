@@ -2,12 +2,12 @@
 1890. The Latest Login in 2020
 
 Table: Logins
-+----------------+----------+
-| Column Name    | Type     |
-+----------------+----------+
-| user_id        | int      |
-| time_stamp     | datetime |
-+----------------+----------+
+    +----------------+----------+
+    | Column Name    | Type     |
+    +----------------+----------+
+    | user_id        | int      |
+    | time_stamp     | datetime |
+    +----------------+----------+
 (user_id, time_stamp) is the primary key
 (combination of columns with unique values) for this table.
 Each row contains information about
