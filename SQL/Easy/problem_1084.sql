@@ -27,12 +27,12 @@ This table can have duplicate rows.
 product_id is a foreign key (reference column) to the Product table.
 Each row of this table contains some information about one sale.
  
-Write a solution to report the products that were only sold in the first quarter of 2019. That is, between 2019-01-01 and 2019-03-31 inclusive.
+Write a solution to report the products that were only sold in the first quarter of 2019.
+That is, between 2019-01-01 and 2019-03-31 inclusive.
 Return the result table in any order.
 The result format is in the following example.
 
 Example 1:
-
 Input: 
 Product table:
     +------------+--------------+------------+
@@ -66,8 +66,17 @@ Explanation:
 
 -- Solution
 
-SELECT Product.product_id, product_name
-FROM Product
-JOIN Sales ON Product.product_id = Sales.product_id
-GROUP BY Product.product_id
-HAVING MIN(sale_date) >= '2019-01-01' AND MAX(sale_date) <= '2019-03-31';
+SELECT
+    Product.product_id,
+    product_name
+FROM
+    Product
+JOIN
+    Sales
+ON
+    Product.product_id = Sales.product_id
+GROUP BY
+    Product.product_id
+HAVING
+    MIN(sale_date) >= '2019-01-01' AND
+    MAX(sale_date) <= '2019-03-31'
