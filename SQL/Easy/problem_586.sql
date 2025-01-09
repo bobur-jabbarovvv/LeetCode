@@ -18,7 +18,6 @@ will have placed more orders than any other customer.
 The result format is in the following example.
 
 Example 1:
-
 Input: 
 Orders table:
     +--------------+-----------------+
@@ -43,8 +42,12 @@ Explanation:
 
 -- Solution
 
-SELECT customer_number
-FROM Orders
-GROUP BY customer_number
-ORDER BY COUNT(customer_number) DESC
-LIMIT 1;
+SELECT
+    customer_number
+FROM
+    Orders
+GROUP BY
+    customer_number
+ORDER BY
+    COUNT(customer_number) DESC
+LIMIT 1
