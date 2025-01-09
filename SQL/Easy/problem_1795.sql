@@ -21,6 +21,7 @@ so that each row has (product_id, store, price).
 If a product is not available in a store,
 do not include a row with that product_id and
 store combination in the result table.
+
 Return the result table in any order.
 The result format is in the following example.
 
