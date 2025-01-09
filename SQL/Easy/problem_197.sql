@@ -1,5 +1,4 @@
 /*
-
 197. Rising Temperature
 
 Table: Weather
@@ -20,7 +19,6 @@ Return the result table in any order.
 The result format is in the following example.
 
 Example 1:
-
 Input: 
 Weather table:
     +----+------------+-------------+
@@ -41,14 +39,17 @@ Output:
 Explanation: 
     In 2015-01-02, the temperature was higher than the previous day (10 -> 25).
     In 2015-01-04, the temperature was higher than the previous day (20 -> 30).
-
 */
 
 -- Solution
 
-SELECT currentDay.id AS Id
-FROM Weather currentDay
-JOIN Weather previousDay
-    ON currentDay.recordDate = DATE_ADD(previousDay.recordDate, INTERVAL 1 DAY) 
-WHERE currentDay.temperature > previousDay.temperature;
-
+SELECT
+    currentDay.id AS Id
+FROM
+    Weather currentDay
+JOIN
+    Weather previousDay
+ON
+    currentDay.recordDate = DATE_ADD(previousDay.recordDate, INTERVAL 1 DAY) 
+WHERE
+    currentDay.temperature > previousDay.temperature
