@@ -83,6 +83,5 @@ ON
     s.employee_id = e.employee_id
 WHERE
     e.employee_id IS NULL
-
 ORDER BY
     employee_id ASC
