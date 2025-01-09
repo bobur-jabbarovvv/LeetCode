@@ -22,7 +22,6 @@ Return the result table ordered by employee_id.
 The result format is in the following example.
 
 Example 1:
-
 Input:  
 Employees table:
     +-------------+-----------+------------+--------+
@@ -51,9 +50,18 @@ Explanation:
 
 -- Solution
 
-SELECT employee_id
-FROM Employees e
-WHERE salary < 30000
-  AND manager_id IS NOT NULL
-  AND manager_id NOT IN (SELECT employee_id FROM Employees)
-ORDER BY employee_id;
+SELECT
+    employee_id
+FROM
+    Employees e
+WHERE
+    salary < 30000 AND
+    manager_id IS NOT NULL AND
+    manager_id NOT IN   (
+                        SELECT
+                            employee_id
+                        FROM
+                            Employees
+                        )
+ORDER BY
+    employee_id
