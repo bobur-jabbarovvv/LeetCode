@@ -88,4 +88,4 @@ WHERE
 GROUP BY
     e.employee_id, e.name
 ORDER BY
-    e.employee_id;
+    e.employee_id
