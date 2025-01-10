@@ -87,4 +87,4 @@ GROUP BY
     contest_id
 ORDER BY
     percentage DESC,
-    contest_id ASC;
+    contest_id ASC
