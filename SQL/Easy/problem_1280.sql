@@ -1,5 +1,4 @@
 /*
-
 1280. Students and Examinations
 
 Table: Students
@@ -119,4 +118,4 @@ GROUP BY
     Subjects.subject_name
 ORDER BY 
     Students.student_id, 
-    Subjects.subject_name;
+    Subjects.subject_name
