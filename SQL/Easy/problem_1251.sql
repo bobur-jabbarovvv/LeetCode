@@ -10,9 +10,12 @@ Table: Prices
     | end_date      | date    |
     | price         | int     |
     +---------------+---------+
-(product_id, start_date, end_date) is the primary key (combination of columns with unique values) for this table.
-Each row of this table indicates the price of the product_id in the period from start_date to end_date.
-For each product_id there will be no two overlapping periods. That means there will be no two intersecting periods for the same product_id.
+(product_id, start_date, end_date) is the primary key
+(combination of columns with unique values) for this table.
+Each row of this table indicates the price of the product_id
+in the period from start_date to end_date.
+For each product_id there will be no two overlapping periods.
+That means there will be no two intersecting periods for the same product_id.
  
 Table: UnitsSold
     +---------------+---------+
@@ -30,7 +33,6 @@ Return the result table in any order.
 The result format is in the following example.
 
 Example 1:
-
 Input: 
 Prices table:
     +------------+------------+------------+--------+
@@ -73,8 +75,7 @@ FROM
 LEFT JOIN
     UnitsSold
 ON
-    Prices.product_id = UnitsSold.product_id
-AND
+    Prices.product_id = UnitsSold.product_id AND
     purchase_date BETWEEN start_date AND end_date
 GROUP BY
-    Prices.product_id;
+    Prices.product_id
