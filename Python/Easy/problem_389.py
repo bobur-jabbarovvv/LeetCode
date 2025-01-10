@@ -7,13 +7,14 @@ and then add one more letter at a random position.
 Return the letter that was added to t.
 
 Example 1:
-Input: s = "abcd", t = "abcde"
-Output: "e"
-Explanation: 'e' is the letter that was added.
+    Input: s = "abcd", t = "abcde"
+    Output: "e"
+Explanation:
+    'e' is the letter that was added.
 
 Example 2:
-Input: s = "", t = "y"
-Output: "y"
+    Input: s = "", t = "y"
+    Output: "y"
 """
 
 # Solution
