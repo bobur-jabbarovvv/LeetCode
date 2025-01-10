@@ -1,5 +1,4 @@
 /*
-
 1407. Top Travellers
 
 Table: Users
@@ -28,10 +27,7 @@ Return the result table ordered by travelled_distance in descending order,
 if two or more users traveled the same distance, order them by their name in ascending order.
 The result format is in the following example.
 
- 
-
 Example 1:
-
 Input: 
 Users table:
     +------+-----------+
@@ -81,8 +77,17 @@ Explanation:
 
 -- Solution
 
-SELECT name, IFNULL(SUM(distance), 0) AS travelled_distance
-FROM Rides
-RIGHT JOIN Users ON Users.id = Rides.user_id
-GROUP BY user_id
-ORDER BY SUM(distance) DESC, name ASC;
+SELECT
+    name,
+    IFNULL(SUM(distance), 0) AS travelled_distance
+FROM
+    Rides
+RIGHT JOIN
+    Users
+ON
+    Users.id = Rides.user_id
+GROUP BY
+    user_id
+ORDER BY
+    SUM(distance) DESC,
+    name ASC
