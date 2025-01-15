@@ -38,11 +38,12 @@ Explanation:
 
 class Solution(object):
     def plusOne(self, digits):
-        for i in range(len(digits)-1, -1, -1):
-            if digits[i] < 9:
-                digits[i] += 1
-                return digits
-            digits[i] = 0
+        for i in range(len(digits)-1, -1, -1): # Backward iteration
+            if digits[i] < 9: # If last element is less than 9
+                digits[i] += 1 # Increment by 1
+                return digits 
+            # If last element is not less than 9
+            digits[i] = 0 # If last element is not less tha
             
-        digits.insert(0, 1) # Add 1 to beginning if all other numbers are 9
+        digits.insert(0, 1) # Insert 1 at the beginning, if all digits were 9,
         return digits
