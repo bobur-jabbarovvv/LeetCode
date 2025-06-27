@@ -24,7 +24,6 @@ Example 3:
 Explanation:
     Reads 01 from right to left.
     Therefore it is not a palindrome.
-
 """
 
 class Solution(object):
