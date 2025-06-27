@@ -31,8 +31,6 @@ Explanation:
     it is a palindrome.
 """
 
-# Solution
-
 class Solution(object):
     def isPalindrome(self, s):
         s = ''.join(char for char in s if char.isalnum()).lower()
