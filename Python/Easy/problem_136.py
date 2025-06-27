@@ -20,8 +20,6 @@ Example 3:
     Output: 1
 """
 
-# Solution
-
 class Solution(object):
     def singleNumber(self, nums):
         return 2 * sum(set(nums)) - sum(nums)
