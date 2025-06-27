@@ -34,8 +34,6 @@ Explanation:
     Thus, the result should be [1,0].
 """
 
-# Solution
-
 class Solution(object):
     def plusOne(self, digits):
         for i in range(len(digits)-1, -1, -1): # Backward iteration
