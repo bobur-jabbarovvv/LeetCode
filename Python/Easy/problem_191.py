@@ -26,8 +26,6 @@ Explanation:
     has a total of thirty set bits.
 """
 
-# Solution
-
 class Solution(object):
     def hammingWeight(self, n):
         counter = 0
