@@ -26,6 +26,8 @@ Explanation:
     Therefore it is not a palindrome.
 """
 
+# Solution
+
 class Solution(object):
     def isPalindrome(self, x):
         s = str(x) # convert int to str for reversing
