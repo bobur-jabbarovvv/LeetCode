@@ -23,8 +23,6 @@ Explanation:
     2 is returned.
 """
 
-# Solution
-
 class Solution(object):
     def mySqrt(self, x):
         if (x == 0) or (x == 1):
