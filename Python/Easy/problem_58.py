@@ -25,8 +25,6 @@ Explanation:
     The last word is "joyboy" with length 6.
 """
 
-# Solution
-
 class Solution(object):
     def lengthOfLastWord(self, s):
         counter = 0
