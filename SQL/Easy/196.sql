@@ -52,22 +52,11 @@ Explanation:
 
 -- Solution
 
-DELETE FROM
-    Person
-WHERE
-    id NOT IN (
-        SELECT
-            id
-        FROM
-            (
-                -- Find the smallest id per email.
-                SELECT
-                    MIN(id) AS id
-                FROM
-                    Person
-                GROUP BY
-                    email
-            )
-        -- Derived Table
-        t
-    );
+DELETE FROM Person
+WHERE id NOT IN (
+    SELECT id FROM (
+        SELECT MIN(id) AS id
+        FROM Person
+        GROUP BY email
+    ) t
+);
